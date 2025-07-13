@@ -1,0 +1,198 @@
+:root {
+  --gold: #c8a44b;
+  --gold-hover: #d8b74e;
+  --dark: #0d1a26;
+  --light-dark: #12202d;
+  --white: #ffffff;
+  --gray: #ccc;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --radius: 12px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--dark);
+  color: var(--white);
+  line-height: 1.6;
+}
+
+header {
+  text-align: center;
+  padding: 3rem 1rem;
+  background-color: var(--light-dark);
+  box-shadow: var(--shadow);
+}
+
+.logo {
+  width: 120px;
+  border-radius: 50%;
+  box-shadow: var(--shadow);
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.75rem;
+  color: var(--gold);
+  margin: 0.5rem 0;
+  font-weight: 700;
+}
+
+p {
+  font-size: 1.2rem;
+  color: var(--gray);
+  margin: 0;
+}
+
+section {
+  padding: 3rem 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 2rem;
+  color: var(--gold);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.services ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.services li {
+  background-color: var(--light-dark);
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  position: relative;
+  padding-left: 2rem;
+}
+
+.services li::before {
+  content: "✔";
+  color: var(--gold);
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  font-weight: bold;
+}
+
+.gallery .images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.gallery .images div {
+  background-color: var(--light-dark);
+  padding: 1rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.gallery img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: 3px solid var(--gold);
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.03);
+}
+
+.contact form {
+  background-color: var(--light-dark);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+input,
+textarea {
+  padding: 1rem;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #fff;
+  color: #000;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+button {
+  background-color: var(--gold);
+  color: var(--dark);
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--gold-hover);
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #08121a;
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-top: 3rem;
+  border-top: 1px solid #1c2b39;
+}
+
+/* -------- RESPONSIVE DESIGN -------- */
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  .gallery .images {
+    grid-template-columns: 1fr;
+  }
+
+  .logo {
+    width: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact form {
+    padding: 1.5rem;
+  }
+
+  input,
+  textarea,
+  button {
+    font-size: 1rem;
+    padding: 0.9rem;
+  }
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Noud Autowash</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img src="images/logo.jpeg" alt="Noud Autowash Logo" class="logo" />
+    <h1>Noud Autowash</h1>
+    <p>Professionele autowasservice – binnen & buiten</p>
+  </header>
+
+  <section class="services">
+    <h2>Onze Services</h2>
+    <ul>
+      <li>Exterieur handwas</li>
+      <li>Interieurreiniging (dashboard, stoelen, tapijt)</li>
+      <li>Velgenreiniging & bandenglans</li>
+      <li>Streeploze ramen en spiegels</li>
+      <li>Bediening met een glimlach</li>
+    </ul>
+  </section>
+
+  <section class="gallery">
+    <h2>Onze Resultaten</h2>
+    <div class="images">
+      <div>
+        <h3>Voor</h3>
+        <img src="images/voor.jpeg" alt="Auto voor reiniging" />
+      </div>
+      <div>
+        <h3>Na</h3>
+        <img src="images/na.jpeg" alt="Auto na reiniging" />
+      </div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2>Afspraak maken</h2>
+    <form action="https://formsubmit.co/noudautowash@gmail.com" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://noudautowash.github.io/noudautowash.html">
+
+        <input type="text" name="Naam" placeholder="Jouw naam" required />
+        <input type="email" name="Email" placeholder="Jouw e-mailadres" required />
+        <textarea name="Bericht" placeholder="Welke service wil je boeken?" required></textarea>
+        <button type="submit">Verstuur</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Noud Autowash</p>
+  </footer>
+</body>
+</html>
