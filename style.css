@@ -196,3 +196,45 @@ footer {
     padding: 0.9rem;
   }
 }
+
+.slogan {
+  font-family: 'Pacifico', cursive;
+  font-size: 1.4rem;
+  margin-top: 1.2rem;
+  font-style: italic;
+  color: var(--white);
+}
+
+.slogan .gold {
+  color: var(--gold);
+  font-weight: bold;
+}
+
+.reviews {
+  padding: 2rem 1.5rem;
+  background-color: var(--light-dark);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+.reviews h2 {
+  text-align: center;
+  color: var(--gold);
+  margin-bottom: 1.5rem;
+}
+
+.review {
+  margin-bottom: 1.5rem;
+  background-color: #0f1b28;
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.review .stars {
+  color: gold;
+  font-size: 1.2rem;
+  margin: 0 0 0.5rem;
+}
