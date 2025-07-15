@@ -238,3 +238,85 @@ footer {
   font-size: 1.2rem;
   margin: 0 0 0.5rem;
 }
+
+.pricing {
+  padding: 3rem 1.5rem;
+  background-color: var(--light-dark);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  max-width: 600px;
+  margin: 3rem auto;
+}
+
+.pricing h2 {
+  text-align: center;
+  color: var(--gold);
+  margin-bottom: 2rem;
+}
+
+.price-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.price-list li {
+  background-color: #0f1b28;
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--white);
+  box-shadow: var(--shadow);
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.price-list li span:last-child {
+  color: var(--gold);
+  font-weight: bold;
+}
+
+.promo {
+  background: linear-gradient(135deg, #c8a44b, #d8b74e);
+  color: var(--dark);
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  max-width: 600px;
+  margin: 3rem auto;
+  animation: pulse 3s infinite;
+}
+
+.promo h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: #000;
+}
+
+.promo p {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.promo .promo-price {
+  font-size: 1.6rem;
+  font-weight: bold;
+  background-color: var(--dark);
+  color: var(--gold);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius);
+  margin-left: 0.5rem;
+}
+
+/* Optionele animatie */
+@keyframes pulse {
+  0% { transform: scale(1); box-shadow: 0 0 12px rgba(200, 164, 75, 0.5); }
+  50% { transform: scale(1.02); box-shadow: 0 0 24px rgba(200, 164, 75, 0.7); }
+  100% { transform: scale(1); box-shadow: 0 0 12px rgba(200, 164, 75, 0.5); }
+}
