@@ -320,3 +320,57 @@ footer {
   50% { transform: scale(1.02); box-shadow: 0 0 24px rgba(200, 164, 75, 0.7); }
   100% { transform: scale(1); box-shadow: 0 0 12px rgba(200, 164, 75, 0.5); }
 }
+
+.year-promo {
+  background-color: #58a8e6;
+  border: 2px var(--gold);
+  color: var(--white);
+  text-align: center;
+  padding: 2rem 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  max-width: 600px;
+  margin: 3rem auto;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.year-promo h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: rgb(196, 196, 4);
+}
+
+.year-promo p {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.year-price {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--gold);
+  background-color: var(--dark);
+  padding: 0.3rem 0.8rem;
+  border-radius: var(--radius);
+  display: inline-block;
+  margin-left: 0.5rem;
+}
+
+.strikethrough {
+  position: relative;
+  display: inline-block;
+  color: white; /* of rood als je wilt */
+}
+
+.strikethrough::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 3px; /* dikte van de streep */
+  background-color: #ff4d4d; /* felrood */
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
