@@ -66,11 +66,11 @@ h2 {
 
 .services li {
   background-color: var(--light-dark);
-  padding: 1rem 1.5rem;
+  padding: 1rem 1.5rem 1rem 2.8rem; /* meer ruimte links */
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   position: relative;
-  padding-left: 2rem;
+  line-height: 1.4;
 }
 
 .services li::before {
@@ -78,8 +78,22 @@ h2 {
   color: var(--gold);
   position: absolute;
   left: 1rem;
-  top: 1rem;
+  top: 50%;
+  transform: translateY(-50%); /* zorgt dat hij altijd verticaal gecentreerd staat */
   font-weight: bold;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 480px) {
+  .services li {
+    padding-left: 3rem; /* nog iets meer ruimte */
+    font-size: 1rem;
+  }
+
+  .services li::before {
+    left: 0.8rem;
+    font-size: 1rem;
+  }
 }
 
 .gallery .images {
@@ -380,4 +394,53 @@ footer {
   text-align: center;
   margin-top: 1.5rem;
   font-size: 1rem;
+}
+
+.closed-banner {
+  background-color: var(--gold);
+  color: var(--dark);
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  box-shadow: var(--shadow);
+  animation: pulse 3s infinite;
+}
+
+.closed-banner p {
+  margin: 0;
+}
+
+.subscription {
+  background-color: var(--light-dark);
+  border: 2px solid var(--gold);
+  color: var(--white);
+  text-align: center;
+  padding: 2rem 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  max-width: 600px;
+  margin: 3rem auto;
+}
+
+.subscription h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--gold);
+}
+
+.subscription p {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.subscription-price {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--gold);
+  background-color: var(--dark);
+  padding: 0.3rem 0.8rem;
+  border-radius: var(--radius);
+  display: inline-block;
+  margin-left: 0.5rem;
 }
