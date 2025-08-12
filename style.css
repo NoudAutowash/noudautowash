@@ -723,4 +723,32 @@ footer {
   transform: translateY(-2px);
 }
 
+/* In style.css toevoegen */
+.rust-banner {
+  background: linear-gradient(90deg, #ffce54, #f6bb42);
+  color: #333;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  animation: bannerFadeIn 1.2s ease-out forwards;
+  position: relative;
+  z-index: 1000;
+}
+
+.rust-banner p {
+  margin: 0;
+}
+
+@keyframes bannerFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
