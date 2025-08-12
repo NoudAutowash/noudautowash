@@ -726,3 +726,14 @@ footer {
   background-color: var(--gold-hover);
   transform: translateY(-2px);
 }
+
+@media (max-width: 768px) {
+  .services ul {
+    justify-items: center; /* centreer in CSS Grid */
+  }
+
+  .services li {
+    max-width: 320px; /* zodat de items niet te breed worden */
+    width: 100%;
+  }
+}
