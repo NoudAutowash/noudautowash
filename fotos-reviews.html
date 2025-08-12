@@ -7,14 +7,14 @@
   <title>Reviews - Noud Autowash</title>
   <link rel="stylesheet" href="style.css" />
   <script>
-  window.addEventListener('DOMContentLoaded', () => {
-    const track = document.querySelector('.reviews-track');
-    if (track) {
-      // Dupliceer de inhoud
-      track.innerHTML += track.innerHTML;
-    }
-  });
-</script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const track = document.querySelector('.reviews-track');
+      if (track && !track.dataset.duplicated) {
+        track.innerHTML += track.innerHTML;
+        track.dataset.duplicated = "true";
+      }
+    });
+  </script>
 </head>
 <body>
     <header>
@@ -53,35 +53,40 @@
     <section class="reviews container">
       <h2>Wat klanten zeggen</h2>
       <div class="reviews-slider">
-        <div id="reviews-container" class="reviews-track"><div id="reviews-container" class="reviews-track">
-        <div class="review">
-          <div class="review-name">Jan</div>
-          <div class="stars">★★★★★</div>
-          <div class="review-text">Ik laat Noud zeker vaker komen!</div>
-        </div>
-        <div class="review">
-          <div class="review-name">Ben</div>
-          <div class="stars">★★★★★</div>
-          <div class="review-text">Noud werkt hard en is zeer correct.</div>
-        </div>
-        <div class="review">
-          <div class="review-name">Fré</div>
-          <div class="stars">★★★★★</div>
-          <div class="review-text">Mijn velgen zijn nog nooit zo schoon geweest!</div>
-        </div>
-        <div class="review">
-          <div class="review-name">Mama</div>
-          <div class="stars">★★★★★</div>
-          <div class="review-text">Ik wil nooit meer ergens anders mijn auto laten wassen.</div>
-        </div>
-        <div class="review">
-          <div class="review-name">Oma</div>
-          <div class="stars">★★★★★</div>
-          <div class="review-text">Wauw. Wat een vakman!</div>
+      <div id="reviews-container" class="reviews-track">
+          <div class="review">
+            <div class="review-name">Jan</div>
+            <div class="stars">★★★★★</div>
+            <div class="review-text">Ik laat Noud zeker vaker komen!</div>
+          </div>
+          <div class="review">
+            <div class="review-name">Ben</div>
+            <div class="stars">★★★★★</div>
+            <div class="review-text">Noud werkt hard en is zeer correct.</div>
+          </div>
+          <div class="review">
+            <div class="review-name">Fré</div>
+            <div class="stars">★★★★★</div>
+            <div class="review-text">Mijn velgen zijn nog nooit zo schoon geweest!</div>
+          </div>
+          <div class="review">
+            <div class="review-name">Mama</div>
+            <div class="stars">★★★★★</div>
+            <div class="review-text">Ik wil nooit meer ergens anders mijn auto laten wassen.</div>
+          </div>
+          <div class="review">
+            <div class="review-name">Oma</div>
+            <div class="stars">★★★★★</div>
+            <div class="review-text">Wauw. Wat een vakman!</div>
+          </div>
+          <div class="review">
+            <div class="review-name">Papa</div>
+            <div class="stars">★★★★★</div>
+            <div class="review-text">Topservice, mijn auto glanst als nooit tevoren!</div>
+          </div>
         </div>
       </div>
-    </div>
-      </div>
+
 
       <h2>Schrijf een review</h2>
       <form class="review-form" 
