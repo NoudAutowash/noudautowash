@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Noud Autowash - Afspraak maken</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img src="images/logo.jpeg" alt="Noud Autowash Logo" class="logo" />
+    <h1>Afspraak maken</h1>
+    <p class="lead">Vul het formulier in en we nemen contact met je op</p>
+  </header>
+
+  <nav class="navbar">
+    <div class="container">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="over-ons.html">Over Ons</a></li>
+        <li><a href="services.html">Services & Prijzen</a></li>
+        <li><a href="fotos-reviews.html">Resultaten & Reviews</a></li>
+        <li><a href="afspraak.html" class="active">Afspraak maken</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="contact">
+      <h2>Maak een afspraak</h2>
+      <form class="contact form" action="https://formsubmit.co/noudautowash@gmail.com" method="POST" onsubmit="alert('Bedankt voor je aanvraag. We nemen zo snel mogelijk contact met je op.');">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://noudautowash.github.io/noudautowash/">
+        <label for="naam">Naam</label>
+        <input id="naam" type="text" name="Naam" placeholder="Jouw naam" required />
+        <label for="email">E-mail</label>
+        <input id="email" type="email" name="email" placeholder="Jouw e-mailadres" required />
+        <label for="bericht">Gewenste service & datum</label>
+        <textarea id="bericht" name="Bericht" placeholder="Welke service wil je boeken? (datum/tijd voorstellen)" required></textarea>
+        <button type="submit">Verstuur</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Noud Autowash - Noud, Gijs, Daan, Jules, Ben & Georges</p>
+  </footer>
+</body>
+</html>

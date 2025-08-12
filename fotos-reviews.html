@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Reviews - Noud Autowash</title>
+  <link rel="stylesheet" href="style.css" />
+  <script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const track = document.querySelector('.reviews-track');
+    if (track) {
+      // Dupliceer de inhoud
+      track.innerHTML += track.innerHTML;
+    }
+  });
+</script>
+</head>
+<body>
+    <header>
+      <div class="container">
+        <img src="images/logo.jpeg" alt="Noud Autowash Logo" class="logo" />
+        <h1>Resultaten & Reviews</h1>
+        <p class="lead">Lees wat onze klanten zeggen en bekijk resultaten!</p>
+      </div>
+    </header>
+    <nav class="navbar">
+      <div class="container">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="over-ons.html">Over Ons</a></li>
+          <li><a href="services.html">Services & Prijzen</a></li>
+          <li><a href="fotos-reviews.html" class="active">Resultaten & Reviews</a></li>
+          <li><a href="afspraak.html">Afspraak Maken</a></li>
+        </ul>
+      </div>
+    </nav>
+  <main>
+    <section class="gallery container">
+      <h2>Onze Resultaten</h2>
+      <div class="images">
+        <div>
+          <h3>Voor</h3>
+          <img src="images/voor.jpeg" alt="Auto voor reiniging" />
+        </div>
+        <div>
+          <h3>Na</h3>
+          <img src="images/na.jpeg" alt="Auto na reiniging" />
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews container">
+      <h2>Wat klanten zeggen</h2>
+      <div class="reviews-slider">
+        <div id="reviews-container" class="reviews-track"><div id="reviews-container" class="reviews-track">
+        <div class="review">
+          <div class="review-name">Jan</div>
+          <div class="stars">★★★★★</div>
+          <div class="review-text">Ik laat Noud zeker vaker komen!</div>
+        </div>
+        <div class="review">
+          <div class="review-name">Ben</div>
+          <div class="stars">★★★★★</div>
+          <div class="review-text">Noud werkt hard en is zeer correct.</div>
+        </div>
+        <div class="review">
+          <div class="review-name">Fré</div>
+          <div class="stars">★★★★★</div>
+          <div class="review-text">Mijn velgen zijn nog nooit zo schoon geweest!</div>
+        </div>
+        <div class="review">
+          <div class="review-name">Mama</div>
+          <div class="stars">★★★★★</div>
+          <div class="review-text">Ik wil nooit meer ergens anders mijn auto laten wassen.</div>
+        </div>
+        <div class="review">
+          <div class="review-name">Oma</div>
+          <div class="stars">★★★★★</div>
+          <div class="review-text">Wauw. Wat een vakman!</div>
+        </div>
+      </div>
+    </div>
+      </div>
+
+      <h2>Schrijf een review</h2>
+      <form class="review-form" 
+      action="https://formsubmit.co/noudautowash@gmail.com" 
+      method="POST" 
+      onsubmit="alert('Bedankt voor je review!');">
+  
+  <!-- Disable captcha -->
+  <input type="hidden" name="_captcha" value="false">
+  <!-- Redirect na verzenden -->
+  <input type="hidden" name="_next" value="https://noudautowash.github.io/noudautowash/">
+
+  <label for="review-name">Naam:</label>
+  <input type="text" id="review-name" name="Naam" placeholder="Je naam" required />
+
+  <label for="review-stars">Sterren:</label>
+  <select id="review-stars" name="Sterren" required>
+    <option value="★★★★★">★★★★★</option>
+    <option value="★★★★☆">★★★★☆</option>
+    <option value="★★★☆☆">★★★☆☆</option>
+    <option value="★★☆☆☆">★★☆☆☆</option>
+    <option value="★☆☆☆☆">★☆☆☆☆</option>
+  </select>
+
+  <label for="review-text">Jouw review:</label>
+  <textarea id="review-text" name="Review" placeholder="Schrijf je review..." required></textarea>
+
+  <button type="submit">Plaats review</button>
+</form>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Noud Autowash - Noud, Gijs, Daan, Jules, Ben & Georges</p>
+  </footer>
+
+  <script src="reviews.js"></script>
+</body>
+</html>
