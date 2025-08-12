@@ -373,7 +373,7 @@ h2 {
   display: flex;
   gap: 0.5rem;
   width: max-content; /* breedte volgt inhoud */
-  animation: scroll-left 60s linear infinite;
+  animation: scroll-left 20s linear infinite;
 }
 
 .reviews-slider .review {
