@@ -200,7 +200,7 @@ h2 {
 /* Gallery */
 .gallery .images {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr); /* altijd max 2 kolommen */
   gap: 1rem;
 }
 
@@ -483,12 +483,6 @@ footer {
   font-size: 1.9rem;
 }
 
-/* Zorg dat gallery grid ook consistent blijft */
-.gallery .images {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1rem;
-}
 
 /* Nav consistentie (herhaal uit eerder) */
 .navbar .container {
