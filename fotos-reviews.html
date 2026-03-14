@@ -6,140 +6,177 @@
   <meta name="robots" content="noindex, nofollow" />
   <title>Reviews - Noud Autowash</title>
   <link rel="stylesheet" href="style.css" />
-  <script>
-    window.addEventListener('DOMContentLoaded', () => {
-      const track = document.querySelector('.reviews-track');
-      if (track && !track.dataset.duplicated) {
-        track.innerHTML += track.innerHTML;
-        track.dataset.duplicated = "true";
-      }
-    });
-  </script>
 </head>
 <body>
-    <header>
-      <div class="container">
-        <img src="images/logo.jpeg" alt="Noud Autowash Logo" class="logo" />
-        <h1>Resultaten & Reviews</h1>
-        <p class="lead">Lees wat onze klanten zeggen en bekijk resultaten!</p>
-      </div>
-    </header>
-    <nav class="navbar">
-      <div class="container">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="over-ons.html">Over Ons</a></li>
-          <li><a href="services.html">Services & Prijzen</a></li>
-          <li><a href="fotos-reviews.html" class="active">Resultaten & Reviews</a></li>
-          <li><a href="afspraak.html">Afspraak Maken</a></li>
-        </ul>
-      </div>
-    </nav>
+  <header>
+    <div class="container">
+      <img src="images/logo.jpeg" alt="Noud Autowash Logo" class="logo" />
+      <h1>Resultaten &amp; Reviews</h1>
+      <p class="lead">Lees wat onze klanten zeggen en bekijk resultaten!</p>
+    </div>
+  </header>
+
+  <nav class="navbar">
+    <div class="container">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="over-ons.html">Over Ons</a></li>
+        <li><a href="services.html">Services &amp; Prijzen</a></li>
+        <li><a href="fotos-reviews.html" class="active">Resultaten &amp; Reviews</a></li>
+        <li><a href="afspraak.html">Afspraak Maken</a></li>
+      </ul>
+    </div>
+  </nav>
+
   <main>
+    <!-- Galerij -->
     <section class="gallery container">
       <h2>Onze Resultaten</h2>
       <div class="images">
-        <div>
-          <h3>Voor</h3>
-          <img src="images/voor.jpeg" alt="Auto voor reiniging" />
-        </div>
-        <div>
-          <h3>Na</h3>
-          <img src="images/na.jpeg" alt="Auto na reiniging" />
-        </div>
-        <div>
-          <h3>Voor</h3>
-          <img src="images/voor2.jpeg" alt="Auto voor reiniging" />
-        </div>
-        <div>
-          <h3>Na</h3>
-          <img src="images/na2.jpeg" alt="Auto na reiniging" />
-        </div>
-        <div>
-          <h3>Voor</h3>
-          <img src="images/voor3.jpeg" alt="Auto voor reiniging" />
-        </div>
-        <div>
-          <h3>Na</h3>
-          <img src="images/na3.jpeg" alt="Auto na reiniging" />
-        </div>
+        <div><h3>Voor</h3><img src="images/voor.jpeg" alt="Auto voor reiniging" /></div>
+        <div><h3>Na</h3><img src="images/na.jpeg" alt="Auto na reiniging" /></div>
+        <div><h3>Voor</h3><img src="images/voor2.jpeg" alt="Auto voor reiniging" /></div>
+        <div><h3>Na</h3><img src="images/na2.jpeg" alt="Auto na reiniging" /></div>
+        <div><h3>Voor</h3><img src="images/voor3.jpeg" alt="Auto voor reiniging" /></div>
+        <div><h3>Na</h3><img src="images/na3.jpeg" alt="Auto na reiniging" /></div>
       </div>
     </section>
 
-    <section class="reviews container">
+    <!-- Reviews -->
+    <section class="reviews-section container">
       <h2>Wat klanten zeggen</h2>
-      <div class="reviews-slider">
-      <div id="reviews-container" class="reviews-track">
-          <div class="review">
-            <div class="review-name">Jan</div>
-            <div class="stars">★★★★★</div>
-            <div class="review-text">Ik laat Noud zeker vaker komen!</div>
-          </div>
-          <div class="review">
-            <div class="review-name">Ben</div>
-            <div class="stars">★★★★★</div>
-            <div class="review-text">Noud werkt hard en is zeer correct.</div>
-          </div>
-          <div class="review">
-            <div class="review-name">Fré</div>
-            <div class="stars">★★★★★</div>
-            <div class="review-text">Mijn velgen zijn nog nooit zo schoon geweest!</div>
-          </div>
-          <div class="review">
-            <div class="review-name">Mama</div>
-            <div class="stars">★★★★★</div>
-            <div class="review-text">Ik wil nooit meer ergens anders mijn auto laten wassen.</div>
-          </div>
-          <div class="review">
-            <div class="review-name">Oma</div>
-            <div class="stars">★★★★★</div>
-            <div class="review-text">Wauw. Wat een vakman!</div>
-          </div>
-          <div class="review">
-            <div class="review-name">Papa</div>
-            <div class="stars">★★★★★</div>
-            <div class="review-text">Topservice, mijn auto glanst als nooit tevoren!</div>
+
+      <div class="rev-wrap">
+        <button class="rev-arrow" id="rev-prev" aria-label="Vorige">&#8592;</button>
+        <div class="rev-viewport" id="rev-viewport">
+          <div class="rev-track" id="rev-track">
+            <div class="rev-card"><p class="rev-name">Jan</p><p class="rev-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p><p class="rev-text">Ik laat Noud zeker vaker komen!</p></div>
+            <div class="rev-card"><p class="rev-name">Ben</p><p class="rev-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p><p class="rev-text">Noud werkt hard en is zeer correct.</p></div>
+            <div class="rev-card"><p class="rev-name">Fré</p><p class="rev-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p><p class="rev-text">Mijn velgen zijn nog nooit zo schoon geweest!</p></div>
+            <div class="rev-card"><p class="rev-name">Mama</p><p class="rev-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p><p class="rev-text">Ik wil nooit meer ergens anders mijn auto laten wassen.</p></div>
+            <div class="rev-card"><p class="rev-name">Oma</p><p class="rev-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p><p class="rev-text">Wauw. Wat een vakman!</p></div>
+            <div class="rev-card"><p class="rev-name">Papa</p><p class="rev-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p><p class="rev-text">Topservice, mijn auto glanst als nooit tevoren!</p></div>
           </div>
         </div>
+        <button class="rev-arrow" id="rev-next" aria-label="Volgende">&#8594;</button>
       </div>
 
+      <div class="rev-dots" id="rev-dots"></div>
 
-      <h2>Schrijf een review</h2>
-      <form class="review-form" 
-      action="https://formsubmit.co/noudautowash@gmail.com" 
-      method="POST" 
-      onsubmit="alert('Bedankt voor je review!');">
-  
-  <!-- Disable captcha -->
-  <input type="hidden" name="_captcha" value="false">
-  <!-- Redirect na verzenden -->
-  <input type="hidden" name="_next" value="https://noudautowash.github.io/noudautowash/">
-
-  <label for="review-name">Naam:</label>
-  <input type="text" id="review-name" name="Naam" placeholder="Je naam" required />
-
-  <label for="review-stars">Sterren:</label>
-  <select id="review-stars" name="Sterren" required>
-    <option value="★★★★★">★★★★★</option>
-    <option value="★★★★☆">★★★★☆</option>
-    <option value="★★★☆☆">★★★☆☆</option>
-    <option value="★★☆☆☆">★★☆☆☆</option>
-    <option value="★☆☆☆☆">★☆☆☆☆</option>
-  </select>
-
-  <label for="review-text">Jouw review:</label>
-  <textarea id="review-text" name="Review" placeholder="Schrijf je review..." required></textarea>
-
-  <button type="submit">Plaats review</button>
-</form>
-
+      <!-- Review formulier -->
+      <h2 style="margin-top:2.5rem;">Schrijf een review</h2>
+      <form class="review-form"
+        action="https://formsubmit.co/noudautowash@gmail.com"
+        method="POST"
+        onsubmit="alert('Bedankt voor je review!');">
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_next" value="https://noudautowash.github.io/noudautowash/" />
+        <div class="form-group">
+          <label for="review-name">Naam:</label>
+          <input type="text" id="review-name" name="Naam" placeholder="Je naam" required />
+        </div>
+        <div class="form-group">
+          <label for="review-stars">Sterren:</label>
+          <select id="review-stars" name="Sterren" required>
+            <option value="5 sterren">&#9733;&#9733;&#9733;&#9733;&#9733;</option>
+            <option value="4 sterren">&#9733;&#9733;&#9733;&#9733;&#9734;</option>
+            <option value="3 sterren">&#9733;&#9733;&#9733;&#9734;&#9734;</option>
+            <option value="2 sterren">&#9733;&#9733;&#9734;&#9734;&#9734;</option>
+            <option value="1 ster">&#9733;&#9734;&#9734;&#9734;&#9734;</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="review-text">Jouw review:</label>
+          <textarea id="review-text" name="Review" placeholder="Schrijf je review..." required></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Plaats review</button>
+      </form>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Noud Autowash - Noud, Gijs, Daan, Jules, Ben & Georges</p>
+    <p>&copy; 2025 Noud Autowash - Noud, Gijs, Daan, Jules, Ben &amp; Georges</p>
   </footer>
 
-  <script src="reviews.js"></script>
+  <script>
+  (function () {
+    var GAP = 16;
+    var VISIBLE = 3;
+
+    var track    = document.getElementById('rev-track');
+    var viewport = document.getElementById('rev-viewport');
+    var dotsEl   = document.getElementById('rev-dots');
+    var btnPrev  = document.getElementById('rev-prev');
+    var btnNext  = document.getElementById('rev-next');
+    var cards    = Array.from(track.children);
+    var total    = cards.length;
+    var maxIdx   = total - VISIBLE;   // nooit verder dan dit
+    var current  = 0;
+
+    /* Bereken kaartbreedte op basis van viewport: (viewportW - 2*gap) / 3 */
+    function cardWidth() {
+      return (viewport.offsetWidth - GAP * (VISIBLE - 1)) / VISIBLE;
+    }
+
+    /* Pas CSS-breedte van elk kaartje aan */
+    function setCardWidths() {
+      var w = cardWidth();
+      cards.forEach(function (c) {
+        c.style.width = w + 'px';
+        c.style.flexShrink = '0';
+      });
+    }
+
+    /* Bouw navigatiestippen */
+    function buildDots() {
+      dotsEl.innerHTML = '';
+      /* 1 stip per mogelijke positie (0 t/m maxIdx) */
+      for (var i = 0; i <= maxIdx; i++) {
+        (function(idx) {
+          var d = document.createElement('button');
+          d.className = 'rev-dot' + (idx === 0 ? ' active' : '');
+          d.setAttribute('aria-label', 'Positie ' + (idx + 1));
+          d.addEventListener('click', function () { go(idx); });
+          dotsEl.appendChild(d);
+        })(i);
+      }
+    }
+
+    function go(idx) {
+      current = Math.max(0, Math.min(idx, maxIdx));
+      var step = cardWidth() + GAP;
+      track.style.transform = 'translateX(-' + (current * step) + 'px)';
+      dotsEl.querySelectorAll('.rev-dot').forEach(function (d, i) {
+        d.classList.toggle('active', i === current);
+      });
+      btnPrev.disabled = current === 0;
+      btnNext.disabled = current === maxIdx;
+    }
+
+    btnPrev.addEventListener('click', function () { go(current - 1); });
+    btnNext.addEventListener('click', function () { go(current + 1); });
+
+    /* Touch / swipe */
+    var startX = 0;
+    viewport.addEventListener('touchstart', function (e) {
+      startX = e.touches[0].clientX;
+    }, { passive: true });
+    viewport.addEventListener('touchend', function (e) {
+      var diff = startX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 40) go(diff > 0 ? current + 1 : current - 1);
+    });
+
+    /* Responsive: herbereken bij resize */
+    window.addEventListener('resize', function () {
+      setCardWidths();
+      go(current);
+    });
+
+    /* Init */
+    setCardWidths();
+    buildDots();
+    go(0);
+  })();
+  </script>
 </body>
 </html>

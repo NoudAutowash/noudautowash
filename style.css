@@ -353,50 +353,128 @@ h2 {
   cursor: pointer;
 }
 
-.reviews-slider {
-  overflow: hidden;
-  width: 100%; /* Niet 100vw */
-  position: relative;
-  height: 150px;
-  max-width: 1100px; /* zelfde max breedte als container */
-  margin: 0 auto; /* centreer binnen container */
+/* ===== Review carousel ===== */
+.reviews-section {
+  padding: 2.4rem 0;
 }
 
-.review {
-  flex: 0 0 auto;
-  min-width: 300px;
-  padding: 0.8rem;
-  border-radius: 10px;
-}
-
-.reviews-track {
+.rev-wrap {
   display: flex;
-  gap: 0.5rem;
-  width: max-content; /* breedte volgt inhoud */
-  animation: scroll-left 30s linear infinite;
+  align-items: stretch;
+  gap: 0.75rem;
 }
 
-.reviews-slider .review {
-  background-color: #223450; /* iets lichtere kleur */
+.rev-viewport {
+  flex: 1;
+  overflow: hidden;
+  min-width: 0;
 }
 
-
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-50% + 0.4rem));
-  }
+.rev-track {
+  display: flex;
+  gap: 16px;
+  transition: transform 0.38s cubic-bezier(0.25, 0.8, 0.25, 1);
+  will-change: transform;
 }
 
+/* Breedte wordt via JS gezet, maar dit zorgt voor fallback */
+.rev-card {
+  flex-shrink: 0;
+  background-color: var(--light-dark);
+  border: 1px solid rgba(200, 164, 75, 0.22);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  box-shadow: var(--shadow);
+  box-sizing: border-box;
+}
 
-
-.review .stars {
-  font-size: 1.4rem; /* groter maken */
+.rev-name {
   color: var(--gold);
-  margin-bottom: 0.4rem;
-  display: block; /* zodat ze boven de tekst komen */
+  font-weight: 700;
+  font-size: 1rem;
+  margin: 0 0 0.3rem;
+}
+
+.rev-stars {
+  color: var(--gold);
+  font-size: 1.25rem;
+  letter-spacing: 2px;
+  margin: 0 0 0.5rem;
+}
+
+.rev-text {
+  color: var(--gray);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Pijltjes */
+.rev-arrow {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid var(--gold);
+  background: transparent;
+  color: var(--gold);
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease;
+  padding: 0;
+  align-self: center;
+}
+
+.rev-arrow:hover {
+  background: var(--gold);
+  color: var(--dark);
+  transform: scale(1.08);
+}
+
+.rev-arrow:disabled {
+  opacity: 0.25;
+  cursor: default;
+  transform: none;
+}
+
+/* Stippen */
+.rev-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 1.1rem;
+}
+
+.rev-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(200, 164, 75, 0.25);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.rev-dot.active {
+  background: var(--gold);
+  transform: scale(1.35);
+}
+
+/* Mobiel: 1 kaartje zichtbaar, pijltjes kleiner */
+@media (max-width: 600px) {
+  .rev-arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+  .rev-wrap {
+    gap: 0.4rem;
+  }
 }
 
 /* Forms */
