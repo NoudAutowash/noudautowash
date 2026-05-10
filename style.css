@@ -167,7 +167,7 @@ h2 {
 .titre {
   font-size: 1.6rem;
   color: var(--grey);
-  text-align: center;
+  text-align: left;
   margin-bottom: 1.25rem;
 }
 
