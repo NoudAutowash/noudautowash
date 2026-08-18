@@ -236,14 +236,13 @@ h2 {
   border-radius: var(--radius);
   padding: 1.25rem;
   box-shadow: var(--shadow);
+  text-align: center;
 }
 
-.price-list {
-  list-style: none;
-  padding: 0;
+.price-text {
   margin: 0;
-  display: grid;
-  gap: 0.8rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
 }
 
 .price-list li {
